@@ -1,18 +1,22 @@
-import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import './App.css';
+import Nav from './nav'
+import About from './about';
+import Shop from './shop'
+import Item from './itemDetail';
 
-import Blog from './containers/Blog/Blog';
+import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 
-class App extends Component {
-  render () {
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <Blog />
-        </div>
-      </BrowserRouter>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Nav/>
+        <Route path="/about" component={About}/>
+        <Route path="/shop" exact component={Shop}/>
+        <Route path="/shop/:id" component={Item}/>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

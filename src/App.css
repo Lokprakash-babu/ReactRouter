@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(73, 100, 109);
+  color:white;
+}
+
+.navLink{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 40%;
+}
+
+a{
+  color: black;
+}
+img{
+  background-color: black;
+}
